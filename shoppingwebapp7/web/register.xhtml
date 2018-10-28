@@ -1,0 +1,476 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ps="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui">   
+<h:head>
+<title>Best Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Register :: w3layouts</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<meta name="keywords" content="Best Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+      Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" ></meta>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" ></link>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" ></link>
+<!-- js -->
+<script src="js/jquery.min.js"></script>
+<!-- //js -->
+<!-- cart -->
+	<script src="js/simpleCart.min.js"> </script>
+<!-- cart -->
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"></link>
+<!-- for bootstrap working -->
+	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<!-- //for bootstrap working -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'></link>
+<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'></link>
+<!-- animation-effect -->
+<link href="css/animate.min.css" rel="stylesheet"> </link>
+<script src="js/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
+<!-- //animation-effect -->
+</h:head>
+	
+<h:body>
+<!-- header -->
+	<div class="header">
+		<div class="container">
+			<div class="header-grid">
+				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
+					<ul>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@abundance.com</a></li>
+						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 <span>567</span> 892</li>
+                                                <h:panelGroup rendered="#{not empty username}">
+                                                    <li class=" active ">
+                                                        <h:form >
+                                                            <i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><h:commandLink   id="logout" value="logout" action="#{loginBean.logout}"/>
+                                                        </h:form>
+                                                    </li>
+                                                </h:panelGroup>
+                                                <h:panelGroup rendered="#{empty username}">
+                                                    <li class="active"><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.xhtml">Login</a></li>
+                                                </h:panelGroup>
+                                                <li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.xhtml">Register</a></li>
+                                        </ul>
+				</div>
+				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
+					<ul class="social-icons">
+						<li><a href="#" class="facebook"></a></li>
+						<li><a href="#" class="twitter"></a></li>
+						<li><a href="#" class="g"></a></li>
+						<li><a href="#" class="instagram"></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+                                <div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
+                                    <b:form>
+                                        <b:inputText value="#{searchBean.searchItem}" placeholder="Enter your search term..."  typeahead-minLength="1" typeahead="true" typeahead-values="#{indexBean.autoCompLi3}" tiny-screen="full-width">
+                                            <f:facet name="append">
+                                                <b:commandButton  icon="search" action="#{searchBean.searchButton(searchBean.searchItem)}"/>
+                                            </f:facet>
+                                        </b:inputText>
+                                    </b:form>
+				</div>
+			</div>
+			<div class="logo-nav">
+				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
+					<h1><a href="index.xhtml">Shoprite <span>Shop anywhere</span></a></h1>
+				</div>
+				<div class="logo-nav-left1">
+					<nav class="navbar navbar-default">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header nav_2">
+						<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.xhtml" class="act">Home</a></li>	
+							<!-- Mega Menu -->
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+								<ul class="dropdown-menu multi-column columns-3">
+									<div class="row">
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Men's Wear</h6>
+                                                                                                <li><h:link value="Clothing" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="mensclothing" />
+                                                                                                    <f:param name="catid" value="1" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Wallets" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="wallets" />
+                                                                                                    <f:param name="catid" value="1" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Shoes" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="mensshoes" />
+                                                                                                    <f:param name="catid" value="1" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Watches" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="menswatches" />
+                                                                                                    <f:param name="catid" value="1" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Accessories" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="mensaccessories" />
+                                                                                                    <f:param name="catid" value="1" />
+                                                                                                </h:link></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Women's Wear</h6>
+                                                                                                <li><h:link value="Clothing" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="womensclothing" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+												<li><h:link value="Wallets,Bags" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="wallets" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+												<li><h:link value="Footwear" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="mensshoes" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Watches" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="menswatches" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Accessories" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="accessories" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Jewellery" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="jewellery" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+												<li><h:link value="Beauty &amp; Grooming" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="beautygrooming" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Kid's Wear</h6>
+                                                                                                <li><h:link value="Kids Home Fashion" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="kidshomefashion" />
+                                                                                                    <f:param name="catid" value="3" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Boy's Clothing" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="boysclothing" />
+                                                                                                    <f:param name="catid" value="3" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Girl's Clothing" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="girlsclothing" />
+                                                                                                    <f:param name="catid" value="3" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Shoes" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="mensshoes" />
+                                                                                                    <f:param name="catid" value="3" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Brand Stores" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="brandstores" />
+                                                                                                    <f:param name="catid" value="3" />
+                                                                                                </h:link></li>
+												
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Furniture <b class="caret"></b></a>
+								<ul class="dropdown-menu multi-column columns-3">
+									<div class="row">
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Home Collection</h6>
+                                                                                                <li><h:link value="Cookware" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="cookware" />
+                                                                                                    <f:param name="catid" value="4" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Sofas" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="sofas" />
+                                                                                                    <f:param name="catid" value="4" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Dining Tables" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="diningtable" />
+                                                                                                    <f:param name="catid" value="4" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Shoe Racks" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="shoerack" />
+                                                                                                    <f:param name="catid" value="4" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Home Decor" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="homedecor" />
+                                                                                                    <f:param name="catid" value="4" />
+                                                                                                </h:link></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Office Collection</h6>
+                                                                                                <li><h:link value="Carpets" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="carpets" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Tables" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="tables" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Sofas" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="sofas" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Shoe Racks" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="shoeracksO" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Sockets" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="sockets" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Electrical Machines" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="electricalmachines" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Decorations</h6>
+                                                                                                <li><h:link value="Toys" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="toys" />
+                                                                                                    <f:param name="catid" value="6" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Wall Clock" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="wallclock" />
+                                                                                                    <f:param name="catid" value="6" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Lighting" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="lighting" />
+                                                                                                    <f:param name="catid" value="6" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Top Brands" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="topbrands" />
+                                                                                                    <f:param name="catid" value="6" />
+                                                                                                </h:link></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+								</ul>
+							</li>
+							
+							<li><a href="mail.xhtml">Mail Us</a></li>
+						</ul>
+					</div>
+					</nav>
+				</div>
+				<div class="logo-nav-right">
+					<div class="search-box">
+						<div id="sb-search" class="sb-search">
+							<form>
+                                                            
+							</form>
+						</div>
+					</div>
+						<!-- search-scripts -->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+							<script>
+								new UISearch( document.getElementById( 'sb-search' ) );
+							</script>
+						<!-- //search-scripts -->
+				</div>
+				<div class="header-right">
+					<h:panelGroup id="cartins">
+					<div class="cart box_1">
+						<a href="checkout.xhtml">
+							<h3> <div class="total">
+                                                                <h:outputText id="toti" value="#{checkoutBean.totalCost}"/> (<h:outputText id="mlo" value="#{checkoutBean.numer}"/> items)</div>
+								<img src="images/bag.png" alt="" />
+							</h3>
+						</a>
+                                            <p>
+                                                <h:form>
+                                                <h:commandLink class="simpleCart_empty" value="Empty Cart" rendered="#{not empty username}" >
+                                                        <f:ajax listener="#{checkoutBean.emptyCart()}" event="click" execute="@this" render="mlo" />
+                                                        <f:ajax listener="#{checkoutBean.emptyCart()}" event="click" execute="@this" render="toti" />
+                                                        <f:ajax listener="#{checkoutBean.emptyCart()}" event="click" execute="@this" render="dataT" />
+                                                        <f:ajax listener="#{checkoutBean.emptyCart()}" event="click" execute="@this" render="cashout" />
+                                                        <f:ajax listener="#{checkoutBean.emptyCart()}" event="click" execute="@this" render="num" />
+                                                    </h:commandLink></h:form></p>
+						<div class="clearfix"> </div>
+					</div>
+                                    </h:panelGroup>	
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //header -->
+<!-- breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+				<li><a href="index.xhtml"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li class="active">Register Page</li>
+			</ol>
+		</div>
+	</div>
+<!-- //breadcrumbs -->
+<!-- register -->
+	<div class="register">
+		<div class="container">
+			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Register Here</h3>
+			<p class="est animated wow zoomIn" data-wow-delay=".5s">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+				deserunt mollit anim id est laborum.</p>
+			<div class="login-form-grids">
+                            <h:form>
+				<h5 class="animated wow slideInUp" data-wow-delay=".5s">profile information</h5>
+                                <div class="animated wow slideInUp" data-wow-delay=".5s">
+                                    
+                                    <h:inputText p:placeholder="First Name..." p:required="true" value="#{register.firstName}"/>
+                                    <h:inputText p:placeholder="Last Name..." p:required="true" value="#{register.lastName}" />
+                                    
+                                </div>
+				<div class="register-check-box animated wow slideInUp" data-wow-delay=".5s">
+					<div class="check">
+                                            <label class="checkbox"><h:selectBooleanCheckbox value="#{register.newsLetter}"/><i> </i>Subscribe to Newsletter</label>
+					</div>
+				</div>
+				<h6 class="animated wow slideInUp" data-wow-delay=".5s">Login information</h6>
+				<div class="animated wow slideInUp" data-wow-delay=".5s">
+                                    
+                                        <h:inputText p:type="email" p:placeholder="Email Address" p:required="true" value="#{register.email}"/>
+                                        <h:inputText p:type="password" p:placeholder="Password" p:required="true" value="#{register.password}" ps:match="repeated_password"/>
+                                        <h:inputText p:type="password" p:placeholder="Password Confirmation" p:required="true" value="#{register.password}"/>
+                                       
+                                            <div class="register-check-box">
+                                                    <div class="check">
+                                                        <label class="checkbox"><h:selectBooleanCheckbox  required="true"/><i> </i>I accept the terms and conditions</label>
+                                                    </div>
+                                            </div>
+                                        <h:commandButton  value="Register" action="#{register.registerButton()}" />
+                                    
+				</div>
+                            </h:form>
+			</div>
+			<div class="register-home animated wow slideInUp" data-wow-delay=".5s">
+				<a href="index.html">Home</a>
+			</div>
+		</div>
+	</div>
+<!-- //register -->
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
+					<h3>Let Us Help You</h3>
+                                        <div >
+                                            <a href="single.html"><p>help center</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Contact Us</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>How to Shop on Shoprite</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Return Policy</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Cooperate and Bulk Purchase</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Shoprite Bot</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Become an Affiliate Partner</p></a>
+					</div>
+					
+				</div>
+				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
+					<h3>Contact Info</h3>
+					<ul>
+						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>Enugu State.</span></li>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@abundance.com</a></li>
+						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+                                                <li>
+					 		<li><a href=""><img src="images1/facebook.png"/></a>
+							<a href=""><img src="images/twitter.png"/></a>
+							<a href=""><img src="images/instagram.png" /></a>
+							<a href=""><img src="images/pine.png"/></a></li>
+							<li><a href=""><img src="images/youtube.png" /></a></li>
+						</li>
+                                        </ul>
+                                                
+				</div>
+				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
+					<h3>Get to Know Us</h3>
+					<div >
+                                            <a href="single.html"><p>Careers</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>About Us</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Shoppy Express</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Shipped from overseas</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Terms and Conditions</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Private Policy</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Black Friday</p></a>
+					</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
+					<h3>Ways to Pay</h3>
+					<div class="footer-grid-sub-grids">
+						<div >
+							<a href="single.html"><img src="images1/waysToPay.png" alt=" " class="img-responsive" /></a>
+						</div>
+						
+					</div>
+					<div class="footer-grid-sub-grids">
+                                            <p>Buyer Protection</p>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
+				<h2><a href="index.xhtml">Shoprite <span>shop anywhere</span></a></h2>
+			</div>
+			<div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
+                            <p><h:outputText value="&copy; 2018 Shoprite Store. All rights reserved | Design by ShoppingWebApp"></h:outputText></p>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+</h:body>
+</html>

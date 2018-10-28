@@ -1,0 +1,660 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ps="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui">   
+<h:head>
+<title>Best Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Single :: w3layouts</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" ></meta>
+<meta name="keywords" content="Best Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+      Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" ></meta>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" ></link>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" ></link>
+<!-- js -->
+<script src="js/jquery.min.js"></script>
+<!-- //js -->
+<!-- cart -->
+	<script src="js/simpleCart.min.js"> </script>
+<!-- cart -->
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"></link>
+<!-- for bootstrap working -->
+	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<!-- //for bootstrap working -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'></link>
+<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'></link>
+<!-- animation-effect -->
+<link href="css/animate.min.css" rel="stylesheet"> </link>
+<script src="js/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
+<!-- //animation-effect -->
+</h:head>
+	
+<h:body>
+    
+    <f:metadata>
+        <f:viewParam name="productID" value="#{singleBean.productID}" />        
+        <!-- f:event type="preRenderView" listener="# {cargoDetails.setTrackingId(currentTracking.id)}"/ -->
+        <f:event type="preRenderView" listener="#{singleBean.load()}"/>
+    </f:metadata>
+    
+<!-- header -->
+	<div class="header">
+		<div class="container">
+			<div class="header-grid">
+				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
+					<ul>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@abundance.com</a></li>
+						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 <span>567</span> 892</li>
+                                                <h:panelGroup rendered="#{not empty username}">
+                                                    <li class=" active ">
+                                                        <h:form >
+                                                            <i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><h:commandLink   id="logout" value="logout" action="#{loginBean.logout}"/>
+                                                        </h:form>
+                                                    </li>
+                                                </h:panelGroup>
+                                                <h:panelGroup rendered="#{empty username}">
+                                                    <li class="active"><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.xhtml">Login</a></li>
+                                                </h:panelGroup>
+                                                <li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.xhtml">Register</a></li>
+                                        </ul>
+				</div>
+				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
+					<ul class="social-icons">
+						<li><a href="#" class="facebook"></a></li>
+						<li><a href="#" class="twitter"></a></li>
+						<li><a href="#" class="g"></a></li>
+						<li><a href="#" class="instagram"></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+                                <div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
+                                    <b:form>
+                                        <b:inputText value="#{searchBean.searchItem}" placeholder="Enter your search term..."  typeahead-minLength="1" typeahead="true" typeahead-values="#{indexBean.autoCompLi3}" tiny-screen="full-width">
+                                            <f:facet name="append">
+                                                <b:commandButton  icon="search" action="#{searchBean.searchButton(searchBean.searchItem)}"/>
+                                            </f:facet>
+                                        </b:inputText>
+                                    </b:form>
+				</div>
+			</div>
+			<div class="logo-nav">
+				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
+					<h1><a href="index.xhtml">Shoprite <span>Shop anywhere</span></a></h1>
+				</div>
+				<div class="logo-nav-left1">
+					<nav class="navbar navbar-default">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header nav_2">
+						<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.xhtml" class="act">Home</a></li>	
+							<!-- Mega Menu -->
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+								<ul class="dropdown-menu multi-column columns-3">
+									<div class="row">
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Men's Wear</h6>
+                                                                                                <li><h:link value="Clothing" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="mensclothing" />
+                                                                                                    <f:param name="catid" value="1" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Wallets" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="wallets" />
+                                                                                                    <f:param name="catid" value="1" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Shoes" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="mensshoes" />
+                                                                                                    <f:param name="catid" value="1" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Watches" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="menswatches" />
+                                                                                                    <f:param name="catid" value="1" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Accessories" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="mensaccessories" />
+                                                                                                    <f:param name="catid" value="1" />
+                                                                                                </h:link></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Women's Wear</h6>
+                                                                                                <li><h:link value="Clothing" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="womensclothing" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+												<li><h:link value="Wallets,Bags" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="wallets" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+												<li><h:link value="Footwear" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="mensshoes" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Watches" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="menswatches" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Accessories" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="accessories" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Jewellery" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="jewellery" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+												<li><h:link value="Beauty &amp; Grooming" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="beautygrooming" />
+                                                                                                    <f:param name="catid" value="2" />
+                                                                                                </h:link></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Kid's Wear</h6>
+                                                                                                <li><h:link value="Kids Home Fashion" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="kidshomefashion" />
+                                                                                                    <f:param name="catid" value="3" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Boy's Clothing" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="boysclothing" />
+                                                                                                    <f:param name="catid" value="3" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Girl's Clothing" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="girlsclothing" />
+                                                                                                    <f:param name="catid" value="3" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Shoes" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="mensshoes" />
+                                                                                                    <f:param name="catid" value="3" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Brand Stores" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="brandstores" />
+                                                                                                    <f:param name="catid" value="3" />
+                                                                                                </h:link></li>
+												
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Furniture <b class="caret"></b></a>
+								<ul class="dropdown-menu multi-column columns-3">
+									<div class="row">
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Home Collection</h6>
+                                                                                                <li><h:link value="Cookware" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="cookware" />
+                                                                                                    <f:param name="catid" value="4" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Sofas" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="sofas" />
+                                                                                                    <f:param name="catid" value="4" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Dining Tables" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="diningtable" />
+                                                                                                    <f:param name="catid" value="4" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Shoe Racks" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="shoerack" />
+                                                                                                    <f:param name="catid" value="4" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Home Decor" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="homedecor" />
+                                                                                                    <f:param name="catid" value="4" />
+                                                                                                </h:link></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Office Collection</h6>
+                                                                                                <li><h:link value="Carpets" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="carpets" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Tables" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="tables" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Sofas" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="sofas" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Shoe Racks" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="shoeracksO" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Sockets" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="sockets" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Electrical Machines" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="electricalmachines" />
+                                                                                                    <f:param name="catid" value="5" />
+                                                                                                </h:link></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<h6>Decorations</h6>
+                                                                                                <li><h:link value="Toys" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="toys" />
+                                                                                                    <f:param name="catid" value="6" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Wall Clock" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="wallclock" />
+                                                                                                    <f:param name="catid" value="6" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Lighting" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="lighting" />
+                                                                                                    <f:param name="catid" value="6" />
+                                                                                                </h:link></li>
+                                                                                                <li><h:link value="Top Brands" outcome="products.xhtml?faces-redirect=true" >
+                                                                                                    <f:param name="productSubCat" value="topbrands" />
+                                                                                                    <f:param name="catid" value="6" />
+                                                                                                </h:link></li>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+								</ul>
+							</li>
+							
+							<li><a href="mail.xhtml">Mail Us</a></li>
+						</ul>
+					</div>
+					</nav>
+				</div>
+				<div class="logo-nav-right">
+					<div class="search-box">
+						<div id="sb-search" class="sb-search">
+							<form>
+                                                           
+							</form>
+						</div>
+					</div>
+						<!-- search-scripts -->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+							<script>
+								new UISearch( document.getElementById( 'sb-search' ) );
+							</script>
+						<!-- //search-scripts -->
+				</div>
+				<div class="header-right">
+					<h:panelGroup id="cartins">
+					<div class="cart box_1">
+						<a href="checkout.xhtml">
+							<h3> <div class="total">
+                                                                <h:outputText id="toti" value="#{checkoutBean.totalCost}"/> (<h:outputText id="mlo" value="#{checkoutBean.numer}"/> items)</div>
+								<img src="images/bag.png" alt="" />
+							</h3>
+						</a>
+                                            <p>
+                                                <h:form>
+                                                <h:commandLink class="simpleCart_empty" value="Empty Cart" rendered="#{not empty username}" >
+                                                        <f:ajax listener="#{checkoutBean.emptyCart()}" event="click" execute="@this" render="mlo" />
+                                                        <f:ajax listener="#{checkoutBean.emptyCart()}" event="click" execute="@this" render="toti" />
+                                                        <f:ajax listener="#{checkoutBean.emptyCart()}" event="click" execute="@this" render="dataT" />
+                                                        <f:ajax listener="#{checkoutBean.emptyCart()}" event="click" execute="@this" render="cashout" />
+                                                        <f:ajax listener="#{checkoutBean.emptyCart()}" event="click" execute="@this" render="num" />
+                                                    </h:commandLink></h:form></p>
+						<div class="clearfix"> </div>
+					</div>
+                                    </h:panelGroup>	
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //header -->
+<!-- breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+				<li><a href="index.xhtml"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li class="active">Single Page</li>
+			</ol>
+		</div>
+	</div>
+<!-- //breadcrumbs -->
+<!-- single -->
+	<div class="single">
+		<div class="container">
+			
+			<div class="col-md-12 single-right">
+				<div class="col-md-5 single-right-left animated wow slideInUp" data-wow-delay=".5s">
+					<div class="flexslider">
+						<ul class="slides">
+							<li data-thumb="images1/menswear/#{singleBean.prods.image1}.jpg" >
+                                                            <div class="thumb-image"><h:graphicImage value="images1/menswear/#{singleBean.prods.image1}.jpg" p:data-imagezoom="true" class="img-responsive "  /> </div>
+							</li>
+							<li data-thumb="images1/menswear/#{singleBean.prods.image2}.jpg">
+                                                            <div class="thumb-image"> <h:graphicImage value="images1/menswear/#{singleBean.prods.image2}.jpg" p:data-imagezoom="true" class="img-responsive "  /> </div>
+							</li>
+							<li data-thumb="images1/menswear/#{singleBean.prods.image3}.jpg">
+                                                            <div class="thumb-image"><h:graphicImage value="images1/menswear/#{singleBean.prods.image3}.jpg" p:data-imagezoom="true" class="img-responsive "  /> </div>
+							</li> 
+						</ul>
+					</div>
+					<!-- flixslider -->
+						<script defer="true" src="js/jquery.flexslider.js"></script>
+						<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+						<script>
+						// Can also be used with $(document).ready()
+						$(window).load(function() {
+						  $('.flexslider').flexslider({
+							animation: "slide",
+							controlNav: "thumbnails"
+						  });
+						});
+						</script>
+					<!-- flixslider -->
+                                </div>
+                            
+				<div class="col-md-7 single-right-left simpleCart_shelfItem animated wow slideInRight" data-wow-delay=".5s">
+                                    <h:form>
+                                    <h3><h:outputText value="#{singleBean.prods.productName}" /></h3>
+                                    <h4><span class="item_price"> <h:outputText value="#{singleBean.prods.newPrice}" /></span> </h4>
+					<div class="rating1">
+						<span class="starRating">
+                                                    <input id="rating5" type="radio" name="rating" value="5"></input>
+							<label for="rating5">5</label>
+                                                        <input id="rating4" type="radio" name="rating" value="4"></input>
+							<label for="rating4">4</label>
+                                                        <input id="rating3" type="radio" name="rating" value="3" checked="true"></input>
+							<label for="rating3">3</label>
+							<input id="rating2" type="radio" name="rating" value="2"></input>
+							<label for="rating2">2</label>
+							<input id="rating1" type="radio" name="rating" value="1"></input>
+							<label for="rating1">1</label>
+						</span>
+					</div>
+					<div class="description">
+						<h5><i>Description</i></h5>
+                                                <p> <h:outputText value="#{singleBean.prods.minDescription}" /> </p>
+					</div>
+					<div class="color-quality">
+						<div class="color-quality-left">
+							<h5>Color : </h5>
+							<ul>
+								<li><a href="#"><span></span>Red</a></li>
+								<li><a href="#" class="brown"><span></span>Yellow</a></li>
+								<li><a href="#" class="purple"><span></span>Purple</a></li>
+								<li><a href="#" class="gray"><span></span>Violet</a></li>
+							</ul>
+						</div>
+						<div class="color-quality-right">
+							<h5>Quality :</h5>
+                                                        <h:selectOneMenu id="country1" value = "#{singleBean.qty}" onchange="change_country(this.value)" class="frm-field required sect"> 
+                                                            <f:selectItem itemValue = "1" itemLabel = "1 Qty" /> 
+                                                            <f:selectItem itemValue = "2" itemLabel = "2 Qty" /> 
+                                                            <f:selectItem itemValue = "3" itemLabel = "3 Qty" /> 
+                                                            <f:selectItem itemValue = "4" itemLabel = "4 Qty" /> 
+                                                            <f:selectItem itemValue = "5" itemLabel = "5 Qty" /> 
+                                                        </h:selectOneMenu>
+							
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="occasional">
+						<h5>Occasion :</h5>
+                                                <h:selectOneRadio value = "#{singleBean}">
+                                                    <f:selectItem class="colr ert radio" itemValue = "1" itemLabel = "Casual Wear  "  />
+                                                    <f:selectItem class="colr radio" itemValue = "2" itemLabel = "Party Wear " />
+                                                    <f:selectItem class="colr radio" itemValue = "3" itemLabel = " Formal Wear" />
+                                                </h:selectOneRadio>	
+						
+						<div class="clearfix"> </div>
+					</div>
+					<div class="occasion-cart">
+						
+                                            <h:commandButton class="item_add" value="add to cart" action="#{singleBean.addToCartSinglePage()}"/>
+					</div>
+                                </h:form>
+					<div class="social">
+						<div class="social-left">
+							<p>Share On :</p>
+						</div>
+						<div class="social-right">
+							<ul class="social-icons">
+								<li><a href="#" class="facebook"></a></li>
+								<li><a href="#" class="twitter"></a></li>
+								<li><a href="#" class="g"></a></li>
+								<li><a href="#" class="instagram"></a></li>
+							</ul>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+				<div class="bootstrap-tab animated wow slideInUp" data-wow-delay=".5s">
+					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+						<ul id="myTab" class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Description</a></li>
+                                                        <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Reviews(<h:outputText value="#{singleBean.numberOfProductReviews}"/>) </a></li>
+							
+						</ul>
+						<div id="myTabContent" class="tab-content">
+							<div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
+								<h5>Product Brief Description</h5>
+                                                                <p> <h:outputText value="#{singleBean.prods.description}" />.
+									<span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+							</div>
+							<div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="profile" aria-labelledby="profile-tab">
+								<div class="bootstrap-tab-text-grids">
+                                                                    <ps:dataList  value="#{singleBean.review}" var="rev" id="reviewTab" type="definition">
+                                                                        
+                                                                        <div class="bootstrap-tab-text-grid-left">
+                                                                            <h:outputText value="#{rev.name}" />
+                                                                        </div>
+                                                                        <div class="bootstrap-tab-text-grid-right">
+                                                                            Subject:<h:outputText value="#{rev.subject}" /> <div class="bootstrap-tab-text-grid-right"  style="font-size: 10px;">X</div><br/>
+                                                                            <h:outputText value="#{rev.review}" />  
+                                                                        </div>
+                                                                        
+                                                                        <div class="clearfix"> </div>
+                                                                    </ps:dataList>
+                                                                    <div class="add-review">
+                                                                        <h4 > <h:outputText value="add a review" rendered="#{not empty username}" /></h4>
+                                                                        <h:form>
+                                                                            <h:inputText p:type="text" p:placeholder="Subject" value="#{singleBean.subject}" p:onfocus="this.value=''" p:onblur="if (this.value == '') {this.value = 'Subject';}" p:required="true" rendered="#{not empty username}"/> <br/>
+                                                                            <h:inputTextarea p:type="text" p:placeholder="Message..." value="#{singleBean.message}" p:onfocus="this.value = '';" p:onblur="if (this.value == '') {this.value = 'Message...';}" p:required="true" rendered="#{not empty username}"/>
+                                                                            <h:commandButton p:type="submit" value="Send"  rendered="#{not empty username}"  action="#{singleBean.sendReview()}"/>
+                                                                            <h:outputText value="Please login to add a review" rendered="#{empty username}"/>
+                                                                        </h:form>
+                                                                    </div>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="dropdown1" aria-labelledby="dropdown1-tab">
+								<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+							</div>
+							<div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="dropdown2" aria-labelledby="dropdown2-tab">
+								<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //single -->
+<!-- single-related-products -->
+	<div class="single-related-products">
+		<div class="container">
+			<h3 class="animated wow slideInUp" data-wow-delay=".5s">Related Products</h3>
+			<p class="est animated wow slideInUp" data-wow-delay=".5s">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
+				deserunt mollit anim id est laborum.</p>
+			<div class="new-collections-grids" >
+				
+				
+					<div  class=" new-collections-grid   animated wow slideInLeft" data-wow-delay=".8s" style="background-color: white"  >
+                                    <h:form  >
+                                <ps:dataGrid var="clothing" value="#{indexBean.mensClothing}" columns="4" rows="4" paginator="false" id="mensClothing"
+                                    paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                    rowsPerPageTemplate="4" style="background-color: blue"  >
+
+                                    <ps:panel style=" background-color: transparent; width:278px;height: 515px;margin-top: 2px;margin-bottom: 2px;">
+                                        
+                                            <h:panelGrid columns="1" style="width: 80%;height: 75%;margin: 0 auto;background: #fff">
+                                                  <div  class="new-collections-grid1-image " >
+                                                <h:link class=" product-image" outcome="single.xhtml?faces-redirect=true" >
+                                                    <h:graphicImage value="images1/menswear/#{clothing.image1}.jpg"  class="img-responsive " style="width: 100%;height: 100%;"  />
+                                                    <f:param name="productID" value="#{clothing.productID}" />
+                                                </h:link>
+                                                </div>
+                                                <h:link value="#{clothing.productName}" id="productName"
+                                                    outcome="single.xhtml?faces-redirect=true" style="text-decoration: none;font-weight: bold;font-size: 15px;" >
+                                                    <f:param name="productID" value="#{clothing.productID}" />          
+                                                </h:link>
+                                                <br/>
+                                                <h:outputText value="#{clothing.minDescription}" style="font-size: 14px;line-height: 1.8em;color: #999;"/>
+                                                <h:form>
+                                                        <strike><i style="color: #999;position: relative;font-style: normal;font-size: 14px;"><h:outputText value="#{clothing.oldPrice}    " /> </i></strike>
+                                                    <h:outputText value="  #{clothing.newPrice}" style="margin-left: 12px;"/> 
+
+                                                    <div class="new-collections-grid1-left simpleCart_shelfItem">
+                                                    
+                                                    <h:commandButton class="item_add btn my-cart-btn my-cart-btn1 " style="font-size: 14px;color: #D8703F;margin: 0;text-decoration: none;text-transform: uppercase;padding: .5em 1em;border: 1px solid;" value="add to cart"  action="#{singleBean.addToCart(clothing)}">
+                                                                <f:ajax listener="#{singleBean.addToCart(clothing)}" event="click" execute="@this" render="info1 info2" />
+                                                            </h:commandButton>
+                                                     
+						</div>
+                                                </h:form>
+                                                
+                                            </h:panelGrid>
+                                        
+                                    </ps:panel>
+ 
+                                </ps:dataGrid>
+                            </h:form></div>
+				
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //single-related-products -->
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
+					<h3>Let Us Help You</h3>
+                                        <div >
+                                            <a href="single.html"><p>help center</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Contact Us</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>How to Shop on Shoprite</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Return Policy</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Cooperate and Bulk Purchase</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Shoprite Bot</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Become an Affiliate Partner</p></a>
+					</div>
+					
+				</div>
+				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
+					<h3>Contact Info</h3>
+					<ul>
+						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>Enugu State.</span></li>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@abundance.com</a></li>
+						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+                                                <li>
+					 		<li><a href=""><img src="images1/facebook.png"/></a>
+							<a href=""><img src="images/twitter.png"/></a>
+							<a href=""><img src="images/instagram.png" /></a>
+							<a href=""><img src="images/pine.png"/></a></li>
+							<li><a href=""><img src="images/youtube.png" /></a></li>
+						</li>
+                                        </ul>
+                                                
+				</div>
+				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
+					<h3>Get to Know Us</h3>
+					<div >
+                                            <a href="single.html"><p>Careers</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>About Us</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Shoppy Express</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Shipped from overseas</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Terms and Conditions</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Private Policy</p></a>
+					</div>
+					<div >
+						<a href="single.html"><p>Black Friday</p></a>
+					</div>
+					
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".8s">
+					<h3>Ways to Pay</h3>
+					<div class="footer-grid-sub-grids">
+						<div >
+							<a href="single.html"><img src="images1/waysToPay.png" alt=" " class="img-responsive" /></a>
+						</div>
+						
+					</div>
+					<div class="footer-grid-sub-grids">
+                                            <p>Buyer Protection</p>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
+				<h2><a href="index.xhtml">Shoprite <span>shop anywhere</span></a></h2>
+			</div>
+			<div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
+                            <p><h:outputText value="&copy; 2018 Shoprite Store. All rights reserved | Design by ShoppingWebApp"></h:outputText></p>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+<!-- zooming-effect -->
+	<script src="js/imagezoom.js"></script>
+<!-- //zooming-effect -->
+</h:body>
+</ui:composition>
